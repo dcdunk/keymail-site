@@ -29,6 +29,9 @@
   <h1 class="notes-h">Privacy policy</h1>
   <p class="intro">Last updated October 15, 2026</p>
 
+  <h2>Who we are</h2>
+  <p>Keymail is made by Danny Chait, who is responsible for this policy. Contact: <a href="mailto:hello@keymailapp.com">hello@keymailapp.com</a>.</p>
+
   <h2>The short version</h2>
   <p>Keymail runs on your Mac and talks directly to your mail provider. There is no Keymail server. We never receive, store or see your email, contacts or account credentials, and the app has no analytics, ads or tracking.</p>
 
@@ -36,6 +39,7 @@
   <ul>
     <li><b>Gmail:</b> when you sign in, Google asks you to grant Keymail access to your mail (<code>gmail.modify</code>) your basic Gmail settings such as signatures (<code>gmail.settings.basic</code>), and your Google Calendar events (<code>calendar.events</code>). Keymail uses that access only to show your mail and do what you ask: read, send, archive, label, snooze, schedule and unsubscribe. Sign-in happens in your browser, so Keymail never sees your Google password.</li>
     <li><b>iCloud Mail (optional):</b> uses an app-specific password you create at Apple, stored in the macOS Keychain, to connect to Apple's mail servers.</li>
+    <li><b>Yahoo Mail (optional):</b> uses an app password you create at Yahoo, stored in the macOS Keychain, to connect only to Yahoo's mail servers.</li>
     <li><b>Outlook (optional, in preview):</b> when you sign in with a Microsoft account (Outlook.com, Hotmail or Microsoft 365), Microsoft asks you to grant Keymail access to read and send your mail, your basic profile, and your mailbox settings (<code>Mail.ReadWrite</code>, <code>Mail.Send</code>, <code>MailboxSettings.ReadWrite</code>, <code>User.Read</code>). Keymail uses that access only to show your mail and do what you ask. Sign-in happens in your browser, so Keymail never sees your Microsoft password.</li>
     <li><b>Calendar:</b> for Google accounts, Keymail uses the <code>calendar.events</code> permission only when you act: answering a meeting invite, or adding an event you created from an email. Those changes go to your Google Calendar, like any calendar app. If you also allow it, Keymail can read and add events in the calendars set up on your Mac, through macOS; that calendar data stays on your Mac.</li>
   </ul>
@@ -44,10 +48,14 @@
   <ul>
     <li><b>Mail cache, settings, snippets and rules:</b> files on your Mac, encrypted with a key kept in your Keychain and readable only by your user account.</li>
     <li><b>Passwords and sign-in tokens:</b> the macOS Keychain.</li>
+    <li><b>Sender logos:</b> cached on your Mac.</li>
   </ul>
 
   <h2>AI features</h2>
-  <p>AI features run only when you ask for one, such as a draft, summary or instant reply. They use an AI command-line tool you have already installed and signed in to on your Mac (Claude Code, Codex or Gemini CLI). When you use one, Keymail sends the email text it needs to that tool, which sends it to its maker (Anthropic, OpenAI or Google) under your own account and that company's privacy terms. Keymail never sends your mail to an AI service on its own.</p>
+  <p>AI features run only when you ask for one, such as a draft, summary or instant reply. They use an AI command-line tool you have already installed and signed in to on your Mac (Claude Code, Codex or Gemini CLI). When you use one, Keymail sends the email text it needs to that tool, which sends it to its maker (Anthropic, OpenAI or Google) under your own account and that company's privacy terms. Keymail never sends your mail to an AI service on its own, and it asks for your permission the first time it would send email text to each AI provider.</p>
+
+  <h3>AI agents on your Mac</h3>
+  <p>Agent access is off unless you turn it on in Settings. When it's on, AI agents running on your Mac (such as Claude Desktop, Claude Code, Codex or Gemini) can read and draft mail through Keymail. Organizing mail (triage) is a separate switch. An agent can never send an email by itself: every send needs your approval in Keymail. Whatever an agent reads is then handled by that agent's maker under its own terms. Settings shows a log of what agents asked for.</p>
 
   <h3>Send to Claude Code</h3>
   <p>If you choose Send to Claude Code on an email, Keymail opens the Claude desktop app with a prompt containing that email, in a project folder you pick. Nothing is sent until you review the prompt and press Enter in Claude. If you choose a model or effort level, Keymail saves it in that folder's <code>.claude/settings.local.json</code> file. From there, Anthropic handles the email under your Claude account and its privacy terms.</p>
@@ -61,18 +69,35 @@
 
   <h2>Network connections</h2>
   <ul>
-    <li><b>Your mail providers:</b> Google, and Apple or Microsoft if you add those accounts.</li>
+    <li><b>Your mail providers:</b> Google, and Apple, Yahoo or Microsoft if you add those accounts.</li>
     <li><b>Updates:</b> the app checks GitHub for new versions. The check downloads a public file and sends no information about you, your mail or your Mac beyond a normal web request, including your IP address, which GitHub handles under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its privacy statement</a>.</li>
-    <li><b>Remote images:</b> by default, emails load images from senders' servers, which can tell a sender when you opened a message. Turn off "Load remote images" in Settings → General to block all outside content.</li>
+    <li><b>Remote images:</b> blocked by default, because senders can use them to see when and where you opened an email. Click "Load images" on an email to load them once, or turn them on for all mail in Settings → General.</li>
+    <li><b>Sender logos:</b> to show a sender's logo, Keymail fetches the icon from the sender's own website, using only the domain of their address (for example, <code>example.com</code>). Nothing about you or the email is sent, but that website sees your IP address. Personal address domains such as gmail.com are skipped. Turn this off in Settings → General.</li>
     <li><b>Unsubscribe:</b> one-key unsubscribe contacts the address the sender provides for it.</li>
   </ul>
   <p>This website is hosted on Cloudflare Pages and sets no cookies. The release notes page loads data from GitHub's public API in your browser.</p>
+
+  <h2>Why we process data</h2>
+  <p>Keymail processes your mail on your Mac because that's needed to provide the service you asked for: an email app (GDPR Article 6(1)(b)). AI features and agent access are optional and rely on your consent, which you give when you turn them on or approve sending to an AI provider. You can withdraw it any time by turning the feature off.</p>
+
+  <h2>How long data is kept</h2>
+  <p>Your data stays on your Mac until you sign out of an account or delete the app. We don't hold copies, so there's nothing for us to keep or delete on our side.</p>
+
+  <h2>Where data is processed</h2>
+  <p>Your mail providers (Google, Microsoft, Apple, Yahoo) and any AI company you choose to use may process data outside your country, under their own terms and privacy policies.</p>
+
+  <h2>Your rights</h2>
+  <p>Depending on where you live, including under the GDPR and California's CCPA, you have the right to access, correct or delete your personal data, to object to or restrict its processing, and to complain to your local data protection authority. Because your data is stored only on your Mac and with the providers you connect, you can view, correct and delete it yourself in Keymail or with those providers. For anything else, email <a href="mailto:hello@keymailapp.com">hello@keymailapp.com</a> and we'll respond within 30 days.</p>
+  <p>Keymail does not sell or share personal information, as those terms are defined in California law.</p>
+
+  <h2>Children</h2>
+  <p>Keymail isn't intended for children under 13, or under 16 in the European Union.</p>
 
   <h2>Google API Services</h2>
   <p>Keymail's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
   <h2>Removing your data</h2>
-  <p>Signing out of an account in Keymail deletes everything the app stored for it: its password or tokens in the Keychain, its cached mail, and its snoozes, reminders, scheduled sends and signatures. Unsent scheduled mail is discarded, not sent. To revoke Keymail's Google access, visit your <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. For a personal Microsoft account, use <a href="https://account.live.com/consent/Manage">Microsoft's app permissions page</a>; for a work or school account, use <a href="https://myapplications.microsoft.com">My Apps</a> or ask your IT admin. To remove everything Keymail stored, delete the app and the folder <code>~/Library/Application Support/Email</code>.</p>
+  <p>Signing out of an account in Keymail deletes everything the app stored for it: its password or tokens in the Keychain, its cached mail, and its snoozes, reminders, scheduled sends and signatures. Unsent scheduled mail is discarded, not sent. To revoke Keymail's Google access, visit your <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. For a personal Microsoft account, use <a href="https://account.live.com/consent/Manage">Microsoft's app permissions page</a>; for a work or school account, use <a href="https://myapplications.microsoft.com">My Apps</a> or ask your IT admin. To remove everything Keymail stored, delete the app and the folders <code>~/Library/Application Support/Email</code>, <code>~/Library/Caches/Email</code> and <code>~/Library/Caches/Keymail-Logos</code>.</p>
 
   <h2>Changes and contact</h2>
   <p>If this policy changes, the new version will appear on this page with a new date. Questions? Email <a href="mailto:hello@keymailapp.com">hello@keymailapp.com</a>.</p>
