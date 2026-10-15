@@ -13,7 +13,8 @@ Plain static HTML/CSS, no build step. Everything lives in `public/`: `index.html
 `/releases` uses the only JavaScript on the site. It fetches `api.github.com/repos/dcdunk/keymail-app/releases` in the browser and renders GitHub's sanitized `body_html`. Release notes are written in the GitHub release (`release.sh` uses `--generate-notes`; edit them on GitHub), not in this repo.
 
 - Local preview: `python3 -m http.server 8788 -d public` (also defined in `.claude/launch.json` as `site`)
-- Deploy: `npx wrangler pages deploy` (reads `wrangler.toml`, which points Pages at `public/`)
+- Deploy: `npx wrangler pages deploy --branch main` (reads `wrangler.toml`, which points Pages at `public/`). It's a classic Pages project named `keymail-site`, created with `--force` because newer Wrangler versions route Pages commands to Workers. Don't pass `--force` again. Deploys are manual: pushing to GitHub does not deploy.
+- Hosting: https://keymail-site.pages.dev, with custom domains keymailapp.com and www.keymailapp.com (proxied CNAMEs to `keymail-site.pages.dev` in the Cloudflare zone).
 - Check after edits: no horizontal scroll at 375px width, and every shortcut shown on the page exists in the app.
 
 Design: dark, Linear/attnos-inspired. Colors are CSS variables on `:root`, taken from the app icon (navy `#252b63`, periwinkle `#6677e0`, keycap lavender `#b8c0e0`). Keycaps are `<kbd>` elements. Inter + JetBrains Mono from Google Fonts.
