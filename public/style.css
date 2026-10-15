@@ -186,5 +186,5 @@ footer a:hover{color:var(--text)}
 .trust{padding:8px 0 72px;text-align:center}
 .trust p{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px}
 .trust ul{list-style:none;padding:0;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:28px 64px}
-.trust img{display:block;width:auto;opacity:.65;transition:opacity .15s}
-.trust a:hover img{opacity:1}
+.trust img{display:block;width:auto;opacity:.65}
+
