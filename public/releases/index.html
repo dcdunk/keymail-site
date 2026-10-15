@@ -36,7 +36,7 @@
 // ponytail: unauthenticated GitHub API, 60 requests/hour per visitor IP. Fine for a changelog.
 (async () => {
   const list = document.getElementById('list');
-  const fallback = '<a href="https://github.com/dcdunk/keymail-app/releases">See releases on GitHub</a>';
+  const fallback = 'See releases on GitHub.';
   try {
     const r = await fetch('https://api.github.com/repos/dcdunk/keymail-app/releases?per_page=50',
       { headers: { Accept: 'application/vnd.github.html+json' } });
@@ -68,7 +68,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Keymail</span>
-    <span><a href="https://github.com/dcdunk/keymail-app">GitHub</a> · <a href="/releases/">Release notes</a> · <a href="/privacy/">Privacy policy</a></span>
+    <span><span>GitHub</span> · <a href="/releases/">Release notes</a> · <a href="/privacy/">Privacy policy</a></span>
   </div>
 </footer>
 
