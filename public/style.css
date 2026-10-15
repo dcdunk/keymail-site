@@ -192,3 +192,4 @@ footer a:hover{color:var(--text)}
 .trust ul{align-items:flex-end}
 .trust img[src$="bluetees.svg"]{transform:translateY(4px)}
 
+a.btn{cursor:pointer}
