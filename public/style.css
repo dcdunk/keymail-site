@@ -191,4 +191,4 @@ footer a:hover{color:var(--text)}
 /* True Competitors' wordmark sits in the bottom quarter of its image (figures above), so align bottoms and drop Blue Tees to its text line */
 .trust ul{align-items:flex-end}
 .trust img[src$="bluetees.svg"]{transform:translateY(4px)}
-a.btn:not([href]){cursor:default}a.btn:not([href]):hover{transform:none;box-shadow:none}
+
