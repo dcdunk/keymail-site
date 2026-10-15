@@ -29,7 +29,7 @@ Use these facts for site copy. SPEC.md is an old planning note and has been wron
 - Gmail sign-in is Google OAuth in the browser (PKCE); multiple accounts. iCloud uses an app-specific password (never the Apple Account password) and supports sending from aliases. All credentials live in the macOS Keychain.
 - v1 features: Cmd+K command palette, j/k/Enter/Esc navigation, Split Inbox (rule-based tabs), Mark Done (archive), Snooze, Send Later, follow-up reminders, snippets, one-key unsubscribe, search.
 - Local SQLite cache; every keypress hits local data first, sync runs in the background. Speed is the core pitch.
-- AI: summarize thread (i) and instant reply (Shift+R) exist in the source, as does create-event-from-email (b). Confirm they work in a shipped release before advertising them.
+- AI (advertised in the #ai section): summarize thread (i) and instant reply (Shift+R, pick 1-3), run through the user's own signed-in CLI: Claude Code, OpenAI Codex or Gemini CLI (`Sources/Email/AIProviders.swift`), read-only, no API key. Logos are Simple Icons paths (simple-icons@13.21.0, CC0) inlined as SVG.
 - Deliberately skipped: read receipts / tracking pixels, team features.
 - Honest caveats: Send Later and Snooze fire only while the Mac is awake and the app is running. Personal-use Google OAuth in Testing mode forces re-sign-in every 7 days (Workspace "Internal" apps avoid this).
 
