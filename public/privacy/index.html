@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy · Keymail</title>
+<meta name="description" content="How Keymail handles your data: your mail stays between your Mac and Google.">
+<meta property="og:title" content="Keymail">
+<meta property="og:description" content="A native, keyboard-first Gmail client for macOS.">
+<meta property="og:image" content="https://keymailapp.com/icon.png">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/icon.png" alt="">Keymail</a>
+    <div class="links"><a href="/#features">Features</a><a href="/#shortcuts">Shortcuts</a><a href="/#privacy">Privacy</a><a href="/releases/">Releases</a></div>
+    <a class="btn" href="https://github.com/dcdunk/keymail-app/releases/latest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.7-1.2 1.9-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Download</span></a>
+  </div>
+</nav>
+
+<main class="wrap notes body legal">
+  <p class="label">Legal</p>
+  <h1 class="notes-h">Privacy policy</h1>
+  <p class="intro">Last updated October 14, 2026</p>
+
+  <h2>The short version</h2>
+  <p>Keymail runs on your Mac and talks directly to Google. There is no Keymail server. We never receive, store or see your email, contacts or account credentials, and the app has no analytics, ads or tracking.</p>
+
+  <h2>What the app accesses</h2>
+  <p>When you sign in, Google asks you to grant Keymail access to your Gmail account (the <code>gmail.modify</code> scope). Keymail uses that access only to show your mail and perform actions you take: reading, sending, archiving, labeling, snoozing, scheduling and unsubscribing.</p>
+  <p>Sign-in happens in your browser through Google. Keymail never sees your Google password.</p>
+
+  <h2>Where your data lives</h2>
+  <ul>
+    <li><b>Mail cache:</b> a local database on your Mac, so the app works instantly. It never leaves your machine.</li>
+    <li><b>Sign-in tokens:</b> stored in the macOS Keychain.</li>
+    <li><b>Settings, split rules and snippets:</b> stored locally on your Mac.</li>
+  </ul>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>No analytics, telemetry or crash reporting sent to us.</li>
+    <li>No read receipts or tracking pixels in mail you send.</li>
+    <li>No selling, sharing or transferring your data to anyone. No ads, and no use of your data to train AI models.</li>
+  </ul>
+
+  <h2>Network connections</h2>
+  <p>The app connects to Google (to sign in and sync Gmail) and to GitHub (to check for updates). Update checks download a public file and send nothing about your mail or account; GitHub sees a normal web request, including your IP address, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p>This website is hosted on Cloudflare Pages and sets no cookies. The release notes page loads data from GitHub's public API in your browser.</p>
+
+  <h2>Google API Services</h2>
+  <p>Keymail's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Removing your data</h2>
+  <p>Remove an account in Keymail's settings to delete its cached mail and tokens from your Mac. To revoke access entirely, visit your <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. Deleting the app and its data folder removes everything Keymail stored.</p>
+
+  <h2>Changes and contact</h2>
+  <p>If this policy changes, the new version will appear on this page with a new date. Questions? <a href="https://github.com/dcdunk/keymail-app/issues">Open an issue on GitHub</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Keymail</span>
+    <span><a href="https://github.com/dcdunk/keymail-app">GitHub</a> · <a href="/releases/">Release notes</a> · <a href="/privacy/">Privacy policy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
