@@ -26,8 +26,8 @@ Only show keyboard shortcuts that exist in `Store+Keyboard.swift` (e.g. j/k move
 
 Use these facts for site copy. SPEC.md is an old planning note and has been wrong (it listed h/l for splits). The app's Swift source is the source of truth: check `Sources/Email/Store+Keyboard.swift` for shortcuts and `Store+Palette.swift` for command names.
 
-- Native SwiftUI app, macOS 14+. Keyboard-first, Superhuman-style. Gmail (REST API) and iCloud Mail (IMAP/SMTP to imap/smtp.mail.me.com).
-- Gmail sign-in is Google OAuth in the browser (PKCE); multiple accounts. iCloud uses an app-specific password (never the Apple Account password) and supports sending from aliases. All credentials live in the macOS Keychain.
+- Native SwiftUI app, macOS 14+. Keyboard-first, Superhuman-style. Gmail (REST API), iCloud Mail (IMAP/SMTP to imap/smtp.mail.me.com) and Outlook in preview (Microsoft Graph; `MicrosoftAuth.swift`, `MicrosoftMail.swift`). Label Outlook "Preview" on the site until the owner says it's GA. Its logo is `public/outlook.svg`, the 2025 Outlook icon from Wikimedia Commons (public domain).
+- Gmail sign-in is Google OAuth in the browser (PKCE); multiple accounts. iCloud uses an app-specific password (never the Apple Account password) and supports sending from aliases. Outlook signs in with Microsoft OAuth in the browser (PKCE, `common` authority: personal and work/school accounts). All credentials live in the macOS Keychain.
 - v1 features: Cmd+K command palette, j/k/Enter/Esc navigation, Split Inbox (rule-based tabs), Mark Done (archive), Snooze, Send Later, follow-up reminders, snippets, one-key unsubscribe, search.
 - Local cache (encrypted JSON files in `~/Library/Application Support/Email`, key in the Keychain; `Sources/Email/Storage.swift`); every keypress hits local data first, sync runs in the background. Speed is the core pitch.
 - AI (advertised in the #ai section): summarize thread (i) and instant reply (Shift+R, pick 1-3), run through the user's own signed-in CLI: Claude Code, OpenAI Codex or Gemini CLI (`Sources/Email/AIProviders.swift`), read-only, no API key. Logos are Simple Icons paths (simple-icons@13.21.0, CC0) inlined as SVG.
