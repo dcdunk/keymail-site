@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keymail: Gmail at the speed of your keyboard</title>
+<meta name="description" content="Keymail is a native, keyboard-first Gmail client for macOS. Split inbox, snooze, send later, and a command palette for everything.">
+<meta property="og:title" content="Keymail">
+<meta property="og:description" content="A native, keyboard-first Gmail client for macOS.">
+<meta property="og:image" content="https://keymailapp.com/icon.png">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/icon.png" alt="">Keymail</a>
+    <div class="links"><a href="/#features">Features</a><a href="/#shortcuts">Shortcuts</a><a href="/#privacy">Privacy</a><a href="/releases/">Releases</a></div>
+    <a class="btn" href="https://github.com/dcdunk/keymail-app/releases/latest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.7-1.2 1.9-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Download</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><b></b>Native for macOS 14+ · Gmail</div>
+    <h1><span>Your inbox, at the speed of your keyboard.</span></h1>
+    <p class="lede">Keymail is a native Gmail client built for people who'd rather not touch the mouse. Every keypress hits a local cache, so nothing waits on the network.</p>
+    <a class="btn lg" href="https://github.com/dcdunk/keymail-app/releases/latest">Download for macOS</a>
+    <p class="sub">Signed and notarized · Updates itself</p>
+
+    <div class="mock" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="tabs"><span class="on">Important<em>4</em></span><span>Team<em>12</em></span><span>VIP<em>2</em></span><span>Newsletters<em>31</em></span><span>Other</span></div>
+      <ul class="rows">
+        <li class="sel"><span class="from">Maya Chen</span><span class="subj"><b>Q4 roadmap review</b> · Can we move the sync to Thursday? I've got</span><span class="t">9:41</span></li>
+        <li><span class="from">Stripe</span><span class="subj"><b>Your payout is on the way</b> · $4,210.00 will arrive in</span><span class="t">9:12</span></li>
+        <li><span class="from">Jonah Park</span><span class="subj"><b>Re: launch copy</b> · Love the second headline. One nit on the</span><span class="t">8:55</span></li>
+        <li><span class="from">Linear</span><span class="subj"><b>3 issues assigned to you</b> · KEY-212 Snooze picker ignores</span><span class="t">8:30</span></li>
+        <li><span class="from">Priya Raman</span><span class="subj"><b>Dinner Friday?</b> · We found a place in the Mission that</span><span class="t">Tue</span></li>
+        <li><span class="from">GitHub</span><span class="subj"><b>[keymail-app] Release v1.0.0</b> · Published by dcdunk</span><span class="t">Mon</span></li>
+      </ul>
+      <div class="palette">
+        <div class="q">snoo</div>
+        <ul>
+          <li class="on">Snooze until tomorrow<kbd>↵</kbd></li>
+          <li>Snooze until next week</li>
+          <li>Send later</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <p class="label">Features</p>
+    <h2>Everything you do in email, one key away.</h2>
+    <p class="intro">Built around the habits of inbox zero: triage fast, clear what's done, bring back what matters when it matters.</p>
+    <div class="grid">
+      <div class="card"><div class="keys"><kbd>⌘</kbd><kbd>K</kbd></div><h3>Command palette</h3><p>Type any action. Each result shows its shortcut, so you learn them as you go.</p></div>
+      <div class="card"><div class="keys"><kbd>E</kbd></div><h3>Mark Done</h3><p>Archive in one keystroke. The next message is already open.</p></div>
+      <div class="card"><div class="keys"><kbd>⌘</kbd><kbd>K</kbd><code>snooze</code></div><h3>Snooze</h3><p>Hide a thread until later. It comes back to the top of your inbox on time.</p></div>
+      <div class="card"><div class="keys"><kbd>H</kbd><kbd>L</kbd></div><h3>Split Inbox</h3><p>Tabs built from rules on sender, domain, recipient, subject or label.</p></div>
+      <div class="card"><div class="keys"><kbd>⌘</kbd><kbd>K</kbd><code>send later</code></div><h3>Send later & follow-ups</h3><p>Schedule a send. Get the thread back if nobody replies in N days.</p></div>
+      <div class="card"><div class="keys"><kbd>⌘</kbd><kbd>K</kbd><code>snippet</code></div><h3>Snippets & unsubscribe</h3><p>Saved replies with variables. One-key unsubscribe from lists.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="shortcuts">
+  <div class="wrap shortcuts">
+    <div>
+      <p class="label">Keyboard first</p>
+      <h2>Learn six keys. Fly through the rest.</h2>
+      <p class="intro">Vim-style navigation that feels natural within a day. Your hands stay on the keys from first message to empty inbox.</p>
+    </div>
+    <ul class="keylist">
+      <li>Next / previous message<span><kbd>J</kbd><kbd>K</kbd></span></li>
+      <li>Next / previous split<span><kbd>H</kbd><kbd>L</kbd></span></li>
+      <li>Open / back<span><kbd>↵</kbd><kbd>esc</kbd></span></li>
+      <li>Done<span><kbd>E</kbd></span></li>
+      <li>Reply / reply all<span><kbd>R</kbd><kbd>A</kbd></span></li>
+      <li>Compose<span><kbd>C</kbd></span></li>
+      <li>Search<span><kbd>/</kbd></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <p class="label">Privacy</p>
+    <h2>Your mail stays between you and Google.</h2>
+    <div class="facts">
+      <div><span class="n">01</span><h3>No servers in the middle</h3><p>Keymail talks to the Gmail API directly from your Mac. There's no Keymail backend reading or storing your email.</p></div>
+      <div><span class="n">02</span><h3>Sign in with Google</h3><p>You sign in through Google in your browser. Keymail never sees your password. Tokens live in the macOS Keychain.</p></div>
+      <div><span class="n">03</span><h3>No tracking pixels</h3><p>Keymail doesn't add read receipts to the mail you send. What you send is what they get.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <img src="/icon.png" alt="Keymail app icon">
+    <h2>Get to inbox zero before your coffee's cold.</h2>
+    <p class="intro">For macOS 14 and later. Works with any number of Google accounts.</p>
+    <a class="btn lg" href="https://github.com/dcdunk/keymail-app/releases/latest">Download Keymail</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Keymail</span>
+    <span><a href="https://github.com/dcdunk/keymail-app">GitHub</a> · <a href="/releases/">Release notes</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
