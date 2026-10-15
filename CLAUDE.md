@@ -19,7 +19,7 @@ Plain static HTML/CSS, no build step. Everything lives in `public/`: `index.html
 
 Design: dark, Linear/attnos-inspired. Colors are CSS variables on `:root`, taken from the app icon (navy `#252b63`, periwinkle `#6677e0`, keycap lavender `#b8c0e0`). Keycaps are `<kbd>` elements. Inter + JetBrains Mono from Google Fonts.
 
-Only show keyboard shortcuts the app SPEC defines (j/k, h/l, Enter, Esc, e, r, a, c, /, Cmd+K). Reach other actions through "Cmd+K + command name" instead of making up keys.
+Only show keyboard shortcuts that exist in `Store+Keyboard.swift` (e.g. j/k move, Tab/Shift+Tab splits, Enter/o open, Esc, e done, h remind me, l label, r/a/f, c, s star, # delete, Shift+U unsubscribe, /, Cmd+K). Reach other actions through "Cmd+K + command name" instead of making up keys.
 
 ## The product (source: https://github.com/dcdunk/keymail-app, `SPEC.md`)
 
@@ -29,7 +29,7 @@ Use these facts for site copy. SPEC.md is an old planning note and has been wron
 - Gmail sign-in is Google OAuth in the browser (PKCE); multiple accounts. iCloud uses an app-specific password (never the Apple Account password) and supports sending from aliases. All credentials live in the macOS Keychain.
 - v1 features: Cmd+K command palette, j/k/Enter/Esc navigation, Split Inbox (rule-based tabs), Mark Done (archive), Snooze, Send Later, follow-up reminders, snippets, one-key unsubscribe, search.
 - Local SQLite cache; every keypress hits local data first, sync runs in the background. Speed is the core pitch.
-- v2 (not shipped, don't advertise as available): AI drafting/summaries via the user's local `claude` CLI (no API key), Google Calendar.
+- AI: summarize thread (i) and instant reply (Shift+R) exist in the source, as does create-event-from-email (b). Confirm they work in a shipped release before advertising them.
 - Deliberately skipped: read receipts / tracking pixels, team features.
 - Honest caveats: Send Later and Snooze fire only while the Mac is awake and the app is running. Personal-use Google OAuth in Testing mode forces re-sign-in every 7 days (Workspace "Internal" apps avoid this).
 
