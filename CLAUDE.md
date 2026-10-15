@@ -23,10 +23,10 @@ Only show keyboard shortcuts the app SPEC defines (j/k, h/l, Enter, Esc, e, r, a
 
 ## The product (source: https://github.com/dcdunk/keymail-app, `SPEC.md`)
 
-Use these facts for site copy. Check the app repo before claiming anything new; features change.
+Use these facts for site copy. SPEC.md is an old planning note and has been wrong (it listed h/l for splits). The app's Swift source is the source of truth: check `Sources/Email/Store+Keyboard.swift` for shortcuts and `Store+Palette.swift` for command names.
 
-- Native SwiftUI app, macOS 14+. Keyboard-first, Superhuman-style. Gmail only, via the Gmail REST API.
-- Sign-in is Google OAuth in the browser (PKCE). The app never sees passwords. Tokens live in the macOS Keychain. Multiple Google accounts supported.
+- Native SwiftUI app, macOS 14+. Keyboard-first, Superhuman-style. Gmail (REST API) and iCloud Mail (IMAP/SMTP to imap/smtp.mail.me.com).
+- Gmail sign-in is Google OAuth in the browser (PKCE); multiple accounts. iCloud uses an app-specific password (never the Apple Account password) and supports sending from aliases. All credentials live in the macOS Keychain.
 - v1 features: Cmd+K command palette, j/k/Enter/Esc navigation, Split Inbox (rule-based tabs), Mark Done (archive), Snooze, Send Later, follow-up reminders, snippets, one-key unsubscribe, search.
 - Local SQLite cache; every keypress hits local data first, sync runs in the background. Speed is the core pitch.
 - v2 (not shipped, don't advertise as available): AI drafting/summaries via the user's local `claude` CLI (no API key), Google Calendar.
