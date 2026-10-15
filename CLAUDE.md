@@ -36,7 +36,7 @@ Use these facts for site copy. SPEC.md is an old planning note and has been wron
 
 ## Privacy policy (/privacy)
 
-Every claim on it was checked against the app source. When app behavior changes, re-check it, especially: network connections (Google, Apple, GitHub for Sparkle, remote images on by default, unsubscribe links, AI CLIs), Google scopes in `GoogleAuth.swift` (`gmail.modify`, `gmail.settings.basic`), what `removeAccount` in `Store+Accounts.swift` deletes, and that there's still no analytics or crash reporting. Bump the "Last updated" date when the text changes. Keep the Google API Services User Data Policy / Limited Use sentence; Google's OAuth review requires it.
+Every claim on it was checked against the app source. When app behavior changes, re-check it, especially: network connections (Google, Apple, GitHub for Sparkle, remote images on by default, unsubscribe links, AI CLIs), Google scopes in `GoogleAuth.swift` (`gmail.modify`, `gmail.settings.basic`, `calendar.events`), Microsoft scopes in `MicrosoftAuth.swift`, Send to Claude Code (`ClaudeCodeLink.swift`: opens Claude Desktop with the email as prompt, writes `.claude/settings.local.json`), what `removeAccount` in `Store+Accounts.swift` deletes, and that there's still no analytics or crash reporting. Bump the "Last updated" date when the text changes. Keep the Google API Services User Data Policy / Limited Use sentence; Google's OAuth review requires it.
 
 ## Downloads and versions
 

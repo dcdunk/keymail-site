@@ -34,10 +34,10 @@
 
   <h2>What the app accesses</h2>
   <ul>
-    <li><b>Gmail:</b> when you sign in, Google asks you to grant Keymail access to your mail (<code>gmail.modify</code>) and your basic Gmail settings such as signatures (<code>gmail.settings.basic</code>). Keymail uses that access only to show your mail and do what you ask: read, send, archive, label, snooze, schedule and unsubscribe. Sign-in happens in your browser, so Keymail never sees your Google password.</li>
+    <li><b>Gmail:</b> when you sign in, Google asks you to grant Keymail access to your mail (<code>gmail.modify</code>) your basic Gmail settings such as signatures (<code>gmail.settings.basic</code>), and your Google Calendar events (<code>calendar.events</code>). Keymail uses that access only to show your mail and do what you ask: read, send, archive, label, snooze, schedule and unsubscribe. Sign-in happens in your browser, so Keymail never sees your Google password.</li>
     <li><b>iCloud Mail (optional):</b> uses an app-specific password you create at Apple, stored in the macOS Keychain, to connect to Apple's mail servers.</li>
     <li><b>Outlook (optional, in preview):</b> when you sign in with a Microsoft account (Outlook.com, Hotmail or Microsoft 365), Microsoft asks you to grant Keymail access to read and send your mail, your basic profile, and your mailbox settings (<code>Mail.ReadWrite</code>, <code>Mail.Send</code>, <code>MailboxSettings.ReadWrite</code>, <code>User.Read</code>). Keymail uses that access only to show your mail and do what you ask. Sign-in happens in your browser, so Keymail never sees your Microsoft password.</li>
-    <li><b>Calendar (optional):</b> if you allow it, Keymail reads and adds events in the calendars already set up on your Mac, through macOS. Calendar data stays on your Mac.</li>
+    <li><b>Calendar:</b> for Google accounts, Keymail uses the <code>calendar.events</code> permission only when you act: answering a meeting invite, or adding an event you created from an email. Those changes go to your Google Calendar, like any calendar app. If you also allow it, Keymail can read and add events in the calendars set up on your Mac, through macOS; that calendar data stays on your Mac.</li>
   </ul>
 
   <h2>Where your data lives</h2>
@@ -48,6 +48,9 @@
 
   <h2>AI features</h2>
   <p>AI features run only when you ask for one, such as a draft, summary or instant reply. They use an AI command-line tool you have already installed and signed in to on your Mac (Claude Code, Codex or Gemini CLI). When you use one, Keymail sends the email text it needs to that tool, which sends it to its maker (Anthropic, OpenAI or Google) under your own account and that company's privacy terms. Keymail never sends your mail to an AI service on its own.</p>
+
+  <h3>Send to Claude Code</h3>
+  <p>If you choose Send to Claude Code on an email, Keymail opens the Claude desktop app with a prompt containing that email, in a project folder you pick. Nothing is sent until you review the prompt and press Enter in Claude. If you choose a model or effort level, Keymail saves it in that folder's <code>.claude/settings.local.json</code> file. From there, Anthropic handles the email under your Claude account and its privacy terms.</p>
 
   <h2>What we don't do</h2>
   <ul>
