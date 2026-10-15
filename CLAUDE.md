@@ -40,7 +40,7 @@ Every claim on it was checked against the app source. When app behavior changes,
 
 ## Downloads and versions
 
-The app ships from GitHub Releases on `dcdunk/keymail-app` (`release.sh`), notarized, with Sparkle auto-updates. Link downloads to the latest release rather than hardcoding a version:
+The app ships from GitHub Releases on `dcdunk/keymail-app` (`release.sh`), notarized, with Sparkle auto-updates. As of 2026-10-15 the Download buttons have no link (owner's request; no release was published yet). When re-enabling, link to the latest release rather than hardcoding a version:
 
 - Latest release page: `https://github.com/dcdunk/keymail-app/releases/latest`
 - Zip asset is named `Keymail-<VERSION>.zip`; the current version is in the app repo's `VERSION` file.
