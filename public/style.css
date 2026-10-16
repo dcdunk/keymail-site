@@ -188,9 +188,8 @@ footer a:hover{color:var(--text)}
 .trust ul{list-style:none;padding:0;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:28px 64px}
 .trust img{display:block;width:auto;opacity:.65}
 
-/* True Competitors' wordmark sits in the bottom quarter of its image (figures above), so align bottoms and drop Blue Tees to its text line */
+/* Both logos sit on one floor: the bottom of the True Competitors wordmark lines up with the bottom of the Blue Tees circle */
 .trust ul{align-items:flex-end}
-.trust img[src$="bluetees.svg"]{transform:translateY(4px)}
 
 a.btn{cursor:pointer}
 .providers{grid-template-columns:repeat(2,1fr)}
