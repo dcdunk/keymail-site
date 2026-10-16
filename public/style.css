@@ -210,3 +210,6 @@ a.btn{cursor:pointer}
 .ctx h5 small{font-weight:400;margin-left:.3em}
 .ctx .file{display:flex;justify-content:space-between;gap:.5em}
 .ctx .day{margin-top:auto;padding-top:.9em;border-top:1px solid rgba(255,255,255,.1)}
+.ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px rgba(184,192,224,.35)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1px rgba(184,192,224,.6),0 8px 30px rgba(102,119,224,.25)}
