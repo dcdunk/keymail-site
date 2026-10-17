@@ -27,7 +27,7 @@
 <main class="wrap notes body legal">
   <p class="label">Legal</p>
   <h1 class="notes-h">Privacy policy</h1>
-  <p class="intro">Last updated October 15, 2026</p>
+  <p class="intro">Last updated October 17, 2026</p>
 
   <h2>Who we are</h2>
   <p>Keymail is made by Danny Chait, who is responsible for this policy. Contact: <a href="mailto:hello@keymailapp.com">hello@keymailapp.com</a>.</p>
@@ -41,7 +41,7 @@
     <li><b>iCloud Mail (optional):</b> uses an app-specific password you create at Apple, stored in the macOS Keychain, to connect to Apple's mail servers.</li>
     <li><b>Yahoo Mail (optional):</b> uses an app password you create at Yahoo, stored in the macOS Keychain, to connect only to Yahoo's mail servers.</li>
     <li><b>Outlook (optional, in preview):</b> when you sign in with a Microsoft account (Outlook.com, Hotmail or Microsoft 365), Microsoft asks you to grant Keymail access to read and send your mail, your basic profile, and your mailbox settings (<code>Mail.ReadWrite</code>, <code>Mail.Send</code>, <code>MailboxSettings.ReadWrite</code>, <code>User.Read</code>). Keymail uses that access only to show your mail and do what you ask. Sign-in happens in your browser, so Keymail never sees your Microsoft password.</li>
-    <li><b>Calendar:</b> for Google accounts, Keymail uses the <code>calendar.events</code> permission only when you act: answering a meeting invite, or adding an event you created from an email. Those changes go to your Google Calendar, like any calendar app. If you also allow it, Keymail can read and add events in the calendars set up on your Mac, through macOS; that calendar data stays on your Mac.</li>
+    <li><b>Calendar:</b> Keymail shows your calendars next to your mail. For Google accounts it reads and changes events with the <code>calendar.events</code> permission. For Outlook accounts it asks once for separate calendar access (<code>Calendars.ReadWrite</code>); your mail keeps working if you say no. Events you create, edit, move, delete or answer go to that calendar, like any calendar app. If you allow it, Keymail also shows and edits the calendars set up on your Mac (such as iCloud), through macOS; that calendar data stays on your Mac.</li>
   </ul>
 
   <h2>Where your data lives</h2>
@@ -73,6 +73,7 @@
     <li><b>Updates:</b> the app checks GitHub for new versions. The check downloads a public file and sends no information about you, your mail or your Mac beyond a normal web request, including your IP address, which GitHub handles under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its privacy statement</a>.</li>
     <li><b>Remote images:</b> blocked by default, because senders can use them to see when and where you opened an email. Click "Load images" on an email to load them once, or turn them on for all mail in Settings → General.</li>
     <li><b>Sender logos:</b> to show a sender's logo, Keymail fetches the icon from the sender's own website, using only the domain of their address (for example, <code>example.com</code>). Nothing about you or the email is sent, but that website sees your IP address. Personal address domains such as gmail.com are skipped. Turn this off in Settings → General.</li>
+    <li><b>Event locations:</b> when you type a place into an event, Keymail looks it up with Apple Maps, so Apple receives what you type there.</li>
     <li><b>Unsubscribe:</b> one-key unsubscribe contacts the address the sender provides for it.</li>
   </ul>
   <p>This website is hosted on Cloudflare Pages and sets no cookies. The release notes page loads data from GitHub's public API in your browser.</p>
