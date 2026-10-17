@@ -212,3 +212,52 @@ a.btn{cursor:pointer}
 .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px rgba(184,192,224,.35)}
 .btn.ghost:hover{box-shadow:inset 0 0 0 1px rgba(184,192,224,.6),0 8px 30px rgba(102,119,224,.25)}
+
+/* view switch button (mail <-> calendar), accent-tinted like the app */
+.circ.sw{position:relative;color:#fff;background:rgba(74,102,237,.3);box-shadow:inset 0 0 0 1px rgba(140,160,255,.35)}
+.circ .badge{position:absolute;top:-.3em;right:-.35em;min-width:1.1em;height:1.1em;padding:0 .3em;border-radius:99em;background:#4a66ed;color:#fff;font:700 .62em/1.1em Inter,sans-serif;text-align:center}
+.circ.pri{color:#fff}
+
+/* calendar mockup (same em scale as the hero) */
+#calendar .desk{margin-top:56px}
+.hdr .pill{padding:.45em 1em;border-radius:99em;white-space:nowrap}
+.hdr .pill small{font-size:.85em;opacity:.6;margin-left:.3em}
+.hdr .seg{display:flex;padding:.15em;border-radius:99em;margin-right:.3em}
+.hdr .seg span{padding:.3em .85em;border-radius:99em;color:rgba(255,255,255,.6);font-size:.92em}
+.hdr .seg .on{color:#fff;font-weight:600;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.tg{font-size:.82em}
+.tg .row{display:grid;grid-template-columns:4.4em repeat(7,1fr)}
+.tg .dh{padding:0 0 .7em .6em;color:rgba(255,255,255,.55);white-space:nowrap}
+.tg .dh b{color:#fff;font-weight:600;margin-left:.2em}
+.tg .dh.today b{background:#4a66ed;padding:.05em .5em;border-radius:99em}
+.tg .allday{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:.4em;min-height:2em}
+.tg .lbl{color:rgba(255,255,255,.35);font-size:.85em;text-align:right;padding-right:.7em;align-self:center}
+.tg .ad{display:block;margin:0 .2em;padding:.2em .5em;border-radius:.4em;font-weight:600;font-size:.92em;white-space:nowrap;overflow:hidden}
+.tg .tgrid{position:relative;display:grid;grid-template-columns:4.4em repeat(7,1fr);height:46em;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.07) 0 1px,transparent 1px 4.6em)}
+.tg .hours{position:relative}
+.tg .hours span{position:absolute;right:.7em;transform:translateY(-.55em);color:rgba(255,255,255,.35);font-size:.85em;white-space:nowrap}
+.tg .col{position:relative;border-left:1px solid rgba(255,255,255,.06)}
+.tg .col.today{background:rgba(74,102,237,.05)}
+.tg .ev{position:absolute;left:.2em;right:.25em;border-radius:.5em;padding:.25em .4em .25em .65em;overflow:hidden;box-shadow:inset .2em 0 0 currentColor}
+.tg .ev b{display:flex;align-items:center;gap:.25em;color:#fff;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tg .ev b svg{flex:0 0 .8em;height:.8em;color:rgba(255,255,255,.6)}
+.tg .ev small{display:block;color:rgba(255,255,255,.6);font-size:.88em;white-space:nowrap}
+.tg .ev.un{background:transparent!important;outline:1px dashed currentColor;outline-offset:-1px}
+.tg .ev,.tg .ad{background:color-mix(in srgb,currentColor 24%,transparent)}
+.c-blue{color:#6f8bff}
+.tg .now{position:absolute;left:-.3em;right:0;height:2px;background:#ff453a}
+.tg .now::before{content:"";position:absolute;left:0;top:-.28em;width:.6em;height:.6em;border-radius:50%;background:#ff453a}
+.cal .ctx{font-size:.85em}
+.mm .mmh{display:flex;justify-content:space-between;margin-bottom:.6em}
+.mm .mmh span{color:rgba(255,255,255,.5)}
+.mm .mmg{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;row-gap:.35em;font-size:.92em}
+.mm i{font-style:normal;color:rgba(255,255,255,.4);font-size:.85em}
+.mm .w{color:#fff}
+.mm .t{background:#4a66ed;color:#fff;border-radius:99em;font-weight:600}
+.mm span{color:rgba(255,255,255,.55)}
+.upc{list-style:none;padding:0}
+.upc li{display:flex;gap:.6em;margin-bottom:.75em}
+.upc li>i{flex:0 0 .2em;border-radius:.1em;background:currentColor}
+.upc p{margin:0;line-height:1.3}
+.upc em{font-style:normal;color:#ffa45c}
