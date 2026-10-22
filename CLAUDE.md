@@ -8,7 +8,7 @@ This is the marketing/download website for **Keymail**, a native macOS mail clie
 
 ## Stack and commands
 
-Plain static HTML/CSS, no build step. Everything lives in `public/`: `index.html` (home), `releases/index.html` (/releases), `privacy/index.html` (/privacy), shared `style.css`, plus `icon.png` and `favicon.png` resized from the app repo's `icon/AppIcon.png`. Nav and footer markup is repeated in each page, so edit every page when you change them.
+Plain static HTML/CSS, no build step. Everything lives in `public/`: `index.html` (home), `releases/index.html` (/releases), `privacy/index.html` (/privacy), `roadmap/index.html` (/roadmap: planned features, no dates; keep it to things the app doesn't do yet), shared `style.css`, plus `icon.png` and `favicon.png` resized from the app repo's `icon/AppIcon.png`. Nav and footer markup is repeated in each page, so edit every page when you change them.
 
 `/releases` uses the only JavaScript on the site. It fetches `api.github.com/repos/dcdunk/keymail-app/releases` in the browser and renders GitHub's sanitized `body_html`. Release notes are written in the GitHub release (`release.sh` uses `--generate-notes`; edit them on GitHub), not in this repo.
 
