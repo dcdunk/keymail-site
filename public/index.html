@@ -13,12 +13,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script src="/copy-email.js" defer></script>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="/"><img src="/icon.png" alt="">Keymail</a>
+    <a class="brand" href="/"><img src="/icon-192.png" alt="" width="26" height="26">Keymail</a>
     <div class="links"><a href="/#features">Features</a><a href="/#ai">AI</a><a href="/#agents">Agents</a><a href="/#shortcuts">Shortcuts</a><a href="/#privacy">Privacy</a><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a></div>
     <a class="btn" href="https://github.com/dcdunk/keymail-app/releases/download/v1.0.26/Keymail-1.0.26.zip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.7-1.2 1.9-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Download</span></a>
   </div>
@@ -185,7 +186,7 @@
     <div class="providers">
       <div class="prov"><svg viewBox="52 42 88 66" aria-hidden="true"><path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/><path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/><path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/><path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/><path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/></svg><div><h3>Gmail</h3><p>Any number of Google accounts, including Google Workspace.</p></div></div>
       <div class="prov"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ic" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ac8fa"/><stop offset="1" stop-color="#1a7cf5"/></linearGradient></defs><path fill="url(#ic)" d="M18.5 19H7a5 5 0 0 1-.9-9.92A6.5 6.5 0 0 1 18.6 9.1 5 5 0 0 1 18.5 19z"/></svg><div><h3>iCloud Mail</h3><p>Your iCloud address, plus aliases to send from.</p></div></div>
-      <div class="prov"><img src="/outlook.svg" alt=""><div><h3>Outlook <span class="tag">Preview</span></h3><p>Outlook.com, Hotmail and Microsoft 365 work or school accounts.</p></div></div>
+      <div class="prov"><img src="/outlook.svg" alt="" width="44" height="44" loading="lazy"><div><h3>Outlook <span class="tag">Preview</span></h3><p>Outlook.com, Hotmail and Microsoft 365 work or school accounts.</p></div></div>
       <div class="prov"><svg class="tile" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5.5" fill="#6001d2"/><path fill="#fff" transform="translate(4.4 4.4) scale(.633)" d="M18.86 1.56L14.27 11.87H19.4L24 1.56H18.86M0 6.71L5.15 18.27L3.3 22.44H7.83L14.69 6.71H10.19L7.39 13.44L4.62 6.71H0M15.62 12.87C13.95 12.87 12.71 14.12 12.71 15.58C12.71 17 13.91 18.19 15.5 18.19C17.18 18.19 18.43 16.96 18.43 15.5C18.43 14.03 17.23 12.87 15.62 12.87Z"/></svg><div><h3>Yahoo Mail <span class="tag">Preview</span></h3><p>Your Yahoo address, with an app password from Yahoo.</p></div></div>
     </div>
     <div class="facts">
@@ -198,7 +199,7 @@
 
 <section class="cta">
   <div class="wrap">
-    <img src="/icon.png" alt="Keymail app icon">
+    <img src="/icon-192.png" alt="Keymail app icon" width="96" height="96" loading="lazy">
     <h2>Get to inbox zero before your coffee's cold.</h2>
     <p class="intro">For macOS 14 and later. Works with Gmail, iCloud Mail, Outlook and Yahoo Mail.</p>
     <div class="ctas"><a class="btn lg" href="https://github.com/dcdunk/keymail-app/releases/download/v1.0.26/Keymail-1.0.26.zip">Download Keymail</a><a class="btn lg ghost" href="mailto:hello@keymailapp.com">Contact us</a></div>
@@ -212,21 +213,5 @@
   </div>
 </footer>
 
-<script>
-// Some Macs have no app set up for email links, so a mailto click does nothing. Copy the address too.
-document.querySelectorAll('a[href^="mailto:"].btn').forEach(b => b.addEventListener('click', async () => {
-  const label = b.textContent;
-  const addr = b.href.slice(7);
-  try { await navigator.clipboard.writeText(addr); }
-  catch { // older fallback when the Clipboard API is refused
-    const t = Object.assign(document.createElement('textarea'), { value: addr });
-    document.body.append(t); t.select();
-    const ok = document.execCommand('copy'); t.remove();
-    if (!ok) return;
-  }
-  b.textContent = 'Email address copied';
-  setTimeout(() => { b.textContent = label; }, 2500);
-}));
-</script>
 </body>
 </html>

@@ -10,7 +10,11 @@ This is the marketing/download website for **Keymail**, a native macOS mail clie
 
 Plain static HTML/CSS, no build step. Everything lives in `public/`: `index.html` (home), `releases/index.html` (/releases), `privacy/index.html` (/privacy), `terms/index.html` (/terms: terms of service; free app, no governing-law clause yet, bump its date when edited), `roadmap/index.html` (/roadmap: planned features, no dates; keep it to things the app doesn't do yet), shared `style.css`, plus `icon.png` and `favicon.png` resized from the app repo's `icon/AppIcon.png`. Nav and footer markup is repeated in each page, so edit every page when you change them.
 
-`/releases` uses the only JavaScript on the site. It fetches `api.github.com/repos/dcdunk/keymail-app/releases` in the browser and renders GitHub's sanitized `body_html`. Release notes are written in the GitHub release (`release.sh` uses `--generate-notes`; edit them on GitHub), not in this repo.
+Security and caching headers live in `public/_headers` (Cloudflare Pages format). The CSP allows scripts only from this site, so never add inline `<script>` blocks or `onclick=` attributes: put JS in a file. If you add a new external origin (fonts, images, an API), add it to the CSP or it will be blocked. Test headers locally with `npx wrangler pages dev public` (the Python server ignores `_headers`).
+
+Pages use `icon-192.png` (resized from `icon.png`); `icon.png` stays as the 512px `og:image`.
+
+JavaScript: `copy-email.js` (home page: copies the address when a mailto button is clicked) and `releases/releases.js`. The releases script fetches `api.github.com/repos/dcdunk/keymail-app/releases` in the browser and renders GitHub's sanitized `body_html`. Release notes are written in the GitHub release (`release.sh` uses `--generate-notes`; edit them on GitHub), not in this repo.
 
 - Local preview: `python3 -m http.server 8788 -d public` (also defined in `.claude/launch.json` as `site`)
 - Deploy: `npx wrangler pages deploy --branch main` (reads `wrangler.toml`, which points Pages at `public/`). It's a classic Pages project named `keymail-site`, created with `--force` because newer Wrangler versions route Pages commands to Workers. Don't pass `--force` again. Deploys are manual: pushing to GitHub does not deploy.
