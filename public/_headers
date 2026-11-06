@@ -1,7 +1,8 @@
 # Cloudflare Pages response headers. Docs: https://developers.cloudflare.com/pages/configuration/headers/
 # CSP: style 'unsafe-inline' is for the style="" attributes in the hero mock-up; img https: is for images in GitHub release notes.
+# cloudflareinsights.com is Cloudflare Web Analytics (auto-injected beacon; reports to /cdn-cgi/rum on this domain, hence connect 'self').
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src https://api.github.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
